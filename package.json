@@ -1,0 +1,21 @@
+{
+  "name": "jenkins-git-demo",
+  "version": "1.0.0",
+  "description": "Mini projet de demonstration Git + Jenkins",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node test/run-tests.js",
+    "security": "npm audit --audit-level=high",
+    "ci": "npm test"
+  },
+  "keywords": [
+    "jenkins",
+    "git",
+    "ci",
+    "demo"
+  ],
+  "author": "",
+  "license": "MIT"
+}
