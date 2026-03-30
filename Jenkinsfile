@@ -22,20 +22,20 @@ pipeline {
 
         stage('Install') {
             steps {
-                sh 'cp package.${DEPENDENCY_PROFILE}.json package.json'
-                sh 'npm install'
+                bat 'copy /Y package.%DEPENDENCY_PROFILE%.json package.json'
+                bat 'npm install'
             }
         }
 
         stage('Tests') {
             steps {
-                sh 'npm test'
+                bat 'npm test'
             }
         }
 
         stage('Dependency Audit') {
             steps {
-                sh 'npm run security'
+                bat 'npm run security'
             }
         }
     }
