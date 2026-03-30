@@ -22,7 +22,7 @@ pipeline {
 
         stage('Install') {
             steps {
-                bat 'copy /Y package.%DEPENDENCY_PROFILE%.json package.json'
+                bat "copy /Y package.${params.DEPENDENCY_PROFILE}.json package.json"
                 bat 'npm install'
             }
         }
